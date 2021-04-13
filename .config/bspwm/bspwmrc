@@ -1,0 +1,61 @@
+#! /bin/sh
+
+# ---
+# key binding service
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# ---
+# desktops
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+# ---
+# spacing
+
+bspc config border_width 4
+bspc config window_gap   8
+
+# ---
+# display settings
+
+bspc config split_ratio        0.50
+bspc config borderless_monocle false
+bspc config gapless_monocle    false
+
+# ---
+# colors
+
+. "$HOME/.config/colors"
+
+bspc config focused_border_color         "$black"
+bspc config active_border_color          "$black"
+bspc config normal_border_color          "$black_faded"
+bspc config urgent_border_color          "$yellow"
+bspc config presel_feedback_color        "$yellow"
+bspc config focus_locked_border_color    "$red"
+bspc config active_locked_border_color   "$red"
+bspc config normal_locked_border_color   "$red_faded"
+bspc config focused_sticky_border_color  "$green"
+bspc config active_sticky_border_color   "$green"
+bspc config normal_sticky_border_color   "$green_faded"
+bspc config focused_private_border_color "$blue"
+bspc config active_private_border_color  "$blue"
+bspc config normal_private_border_color  "$blue_faded"
+
+# ---
+# window
+s
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+# ---
+# launch stuff
+
+# wallpaper
+hsetroot -solid "$black_faded"
+# polybar
+~/.config/polybar/launch.sh
