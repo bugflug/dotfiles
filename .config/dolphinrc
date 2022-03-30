@@ -1,0 +1,15 @@
+[General]
+Version=201
+ViewPropsTimestamp=2021,4,25,3,1,27.314
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+eDP1 HDMI1 Height 1920x1080=1002
+eDP1 HDMI1 Width 1920x1080=930
+eDP1 HDMI1 XPosition 1920x1080=19
+eDP1 HDMI1 YPosition 1920x1080=59
+eDP1 Height 1920x1080=984
+eDP1 Width 1920x1080=930
+eDP1 XPosition 1920x1080=971
+eDP1 YPosition 1920x1080=77

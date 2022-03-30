@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+D=$HOME/.config/init
+
+# loading settings and all that
+# order does matter!
+. $D/theme
+. $D/launch

@@ -1,0 +1,28 @@
+! black ! grey ! light grey ! white
+#define c00 #000000
+#define c08 #2a282a
+#define c07 #74615a
+#define c15 #ffffff
+! red ! light red
+#define c01 #50281b
+#define c09 #893324
+! green ! light green
+#define c02 #355434
+#define c10 #7e8f50
+! yellow ! light yellow
+#define c03 #644331
+#define c11 #cb894d
+! blue ! light blue
+#define c04 #1d1c32
+#define c12 #404356
+! magenta ! light magenta
+#define c05 #2f2529
+#define c13 #5a3c3a
+! cyan ! light cyan
+#define c06 #ffffff
+#define c14 #ffffff
+
+#define c_bg c08
+#define c_fg #b6a9b0
+#define c_inactive c00
+#define c_active c08

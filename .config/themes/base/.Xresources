@@ -1,0 +1,16 @@
+#define c_black #060608
+#define c_darkgrey #141013
+#define c_grey #322b28
+#define c_white #ffffff
+#define c_darkred #73172d
+#define c_red #b4202a
+#define c_darkyellow #fa6a0a
+#define c_yellow #f9a31b
+#define c_darkgreen #24523b
+#define c_green #1a7a3e
+#define c_darkcyan #23674e
+#define c_cyan #5daf8d
+#define c_darkblue #285cc4
+#define c_blue #249fde
+#define c_darkmagenta #793a80
+#define c_magenta #bc4a9b

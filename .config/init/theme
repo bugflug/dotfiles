@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+T_DIR="$HOME/.config/themes/active"
+. "$T_DIR/colors"
+
+# gen/.Xresources
+echo -n "" > ~/.config/gen/.Xresources
+declare -a keys=(
+	"C_0"
+	"C_1"
+	"C_2"
+	"C_3"
+	"C_4"
+	"C_5"
+	"C_6"
+	"C_7"
+	"C_8"
+	"C_9"
+	"C_10"
+	"C_11"
+	"C_12"
+	"C_13"
+	"C_14"
+	"C_15"
+	"C_BG"
+	"C_BG_DIM"
+	"C_FG"
+	"C_FG_DIM"
+)
+for k in ${keys[@]} ; do
+	if [ -z ${k+x} ] ; then eval "$k=#ffffff" ; fi
+	eval "v=\$$k"
+	echo "#define $k $v" >> $HOME/.config/gen/.Xresources
+done
+
+# apply to X
+xrdb -merge -I$HOME $HOME/.Xresources

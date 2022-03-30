@@ -1,2 +1,3 @@
-sxhkd &
-exec bspwm
+#!/usr/bin/env bash
+
+$HOME/.config/init/xinitrc

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+active="$c_10"
+inactive="$c_00"
+selected="$c_13"
+presel="$inactive"

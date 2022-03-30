@@ -1,0 +1,39 @@
+! c00 black
+! c08 grey
+! c01 red
+! c09 red light
+! c02 green
+! c10 green light
+! c03 yellow
+! c11 yellow light
+! c04 blue
+! c12 blue light
+! c05 magenta
+! c13 magenta light
+! c06 cyan
+! c14 cyan light
+! c07 grey light
+! c15 white
+#define c00 #000000
+#define c08 #171318
+#define c09 #3B2925
+#define c01 #352B30
+#define c03 #46291D
+#define c02 #333140
+#define c10 #484553
+#define c11 #58433F
+#define c04 #644331
+#define c12 #875333
+#define c06 #7E5F50
+#define c07 #A77F63
+#define c05 #CB894D
+#define c14 #C8A281
+#define c13 #F1C36C
+#define c15 #FFFFFF
+
+#define c_bg_norm c00
+#define c_bg_fade c08
+#define c_fg_fade c07
+#define c_fg_norm c15
+#define c_inactive c03
+#define c_active c11

@@ -1,0 +1,41 @@
+! c00 black
+! c08 grey
+! c01 red
+! c09 red light
+! c02 green
+! c10 green light
+! c03 yellow
+! c11 yellow light
+! c04 blue
+! c12 blue light
+! c05 magenta
+! c13 magenta light
+! c06 cyan
+! c14 cyan light
+! c07 grey light
+! c15 white
+#define c_00 #000000
+#define c_01 #ec0d0d
+#define c_02 #016321
+#define c_03 #bc4218
+#define c_04 #002780
+#define c_05 #9f12b4
+#define c_06 #214136
+#define c_07 #6e6e6e
+#define c_08 #2e3149
+#define c_09 #f76d46
+#define c_10 #78ff37
+#define c_11 #ef9a45
+#define c_12 #0482ff
+#define c_13 #f76cb9
+#define c_14 #537849
+#define c_15 #ffffff
+
+#define c_active c_07
+#define c_inactive c_08
+
+xterm*VT100.Translations: #override \
+	Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
+	Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+	Ctrl <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)
