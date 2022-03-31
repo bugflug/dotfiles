@@ -1,5 +1,8 @@
 # .bashrc
 
+# gen/bashrc
+. $HOME/.config/gen/.bashrc
+
 # exit if not interactive
 [[ $- != *i* ]] && return
 

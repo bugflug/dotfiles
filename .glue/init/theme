@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 
-T_DIR="$HOME/.config/themes/active"
-. "$T_DIR/colors"
+. "$THEME/colors"
 
-# gen/.Xresources
-# gen/.bashrc
-echo -n "" > ~/.config/gen/.Xresources
-echo -n "" > ~/.config/gen/.bashrc
+declare -A c
 declare -a keys=(
 	"C_0"
 	"C_1"
@@ -34,10 +30,12 @@ for k in ${keys[@]} ; do
 	# v alue
 	if [ -z ${k+x} ] ; then eval "$k=#ffffff" ; fi
 	eval "v=\$$k"
-	# gen configs
-	echo "#define $k $v" >> $HOME/.config/gen/.Xresources
-	echo "export $k=\"$v\"" >> $HOME/.config/gen/.bashrc
+	# insert into theme array
+	c[$k]=$v
 done
+
+reg "c" ".Xresources" "#define %k% %v%"
+reg "c" "envars" "export %k%=\"%v%\""
 
 # apply to X
 xrdb -merge -I$HOME $HOME/.Xresources
