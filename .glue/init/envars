@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+declare -A e=(
+	[THEME]=$HOME/.config/themes/active
+	[GLUE]=$DIR
+	[CONFIG]=$HOME/.config 
+)
+reg "e" "envars" "export %k%=\"%v%\""
+. $DIR/gen/envars

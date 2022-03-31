@@ -1,0 +1,160 @@
+include-file = /home/cob/.config/polybar/colors.ini
+include-file = /home/cob/.config/polybar/decor.ini
+
+include-file = /home/cob/.config/themes/active/polybar
+
+; ---
+; base for all bars
+[bar/base]
+
+; font
+font-0 = HackNerdFontCompleteM Nerd Font:style=Regular:pixelsize=10,2
+
+; display
+monitor = ${env:MONITOR:eDP1}
+
+; position and size
+width = 42%
+offset-x = 16
+offset-y = 16
+height = 42
+radius = 0
+fixed-center = true
+line-size = 3
+padding = 0
+
+; border
+;border-size = 3
+;border-color = ${colors.background}
+
+; colors
+;background = ${colors.background}
+background = #00000000
+foreground = ${colors.foreground}
+line-color = ${colors.foreground}
+
+; modules
+module-margin-left = 0
+module-margine-right = 0
+
+; bspwm
+wm-restack = bspwm
+
+; cursor
+cursor-click = pointer
+cursor-scroll = default
+
+; tray
+tray-maxsize = 18
+tray-background = ${colors.background}
+tray-foreground = ${colors.foreground}
+
+; ---
+; bars
+[bar/main]
+inherit = bar/base
+
+; position and size
+width = 100%:-32
+
+; modules
+modules-left = bspwm
+modules-center =
+modules-right = S clock S audio S
+
+; tray
+tray-position = right
+tray-maxsize = 18
+
+; bspwm
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+; ---
+; bspwm
+[module/bspwm]
+type = internal/bspwm
+
+label-padding = 1
+label-minlen = 1
+
+; size and positioning
+format-padding = 1
+
+; labels
+label-focused = %index%
+label-occupied = %index%
+label-urgent = %index%
+label-empty = %index%
+
+; sizes
+label-focused-minlen = ${self.label-minlen}
+label-occupied-minlen = ${self.label-minlen}
+label-urgent-minlen = ${self.label-minlen}
+label-empty-minlen = ${self.label-minlen}
+
+; positioning
+label-focused-alignment = center
+label-occupied-alignment = center
+label-urgent-alignment = center
+label-empty-alignment = center
+
+; paddings
+label-focused-padding = ${self.label-padding}
+label-occupied-padding = ${self.label-padding}
+label-urgent-padding = ${self.label-padding}
+label-empty-padding = ${self.label-padding}
+
+; text colors
+label-occupied-foreground = ${colors.unfocus-bright}
+label-urgent-foreground = ${colors.urgent-bright}
+label-empty-foreground = ${colors.unfocus-mid}
+
+; underlines
+label-focused-underline = ${colors.focus-bright}
+label-urgent-underline = ${colors.urgent-mid}
+
+; ---
+; clock
+[module/clock]
+type = internal/date
+
+; label
+time = " %H:%M"
+label = %time%
+label-foreground = ${colors.focus-bright}
+label-border-size = 3
+label-border-color = #ffffff
+label-minlen = 5
+
+; ---
+; date
+[module/date]
+type = internal/date
+
+; label
+date = %d.%m.%Y
+label = %date%
+label-foreground = ${colors.focus-mid}
+label-minlen = 10
+
+; ---
+; audio
+[module/audio]
+type = internal/pulseaudio
+
+; label
+format-volume = <ramp-volume> <label-volume>
+label-volume = "%percentage%%"
+label-muted = "婢 MUT"
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
+
+; colors
+ramp-volume-foreground = ${colors.unfocus-mid}
+label-volume-foreground = ${colors.unfocus-mid}
+label-muted-foreground = ${colors.urgent-mid}
+
+; click
+click-right = pavucontrol

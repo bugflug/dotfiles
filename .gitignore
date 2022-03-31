@@ -1,0 +1,12 @@
+.gitconfig
+.git/
+*.swp
+
+# selectively include .config files
+
+.config/*
+!.config/bin
+!.config/bspwm
+!.config/neofetch
+!.config/polybar
+!.config/sxhkd
