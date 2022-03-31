@@ -1,4 +1,4 @@
-export THEME="/home/cob/.config/themes/active"
+export THEME="/home/cob/.theme/00"
 export GLUE="/home/cob/dev/dotfiles/.glue"
 export CONFIG="/home/cob/.config"
 export C_BG="#0a0b0c"

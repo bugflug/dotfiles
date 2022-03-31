@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 declare -A e=(
-	[THEME]=$HOME/.config/themes/active
+	[THEME]=$HOME/.theme/00
 	[GLUE]=$DIR
 	[CONFIG]=$HOME/.config 
 )

@@ -1,0 +1,21 @@
+[colors]
+
+; unfocused
+unfocus-dark = ${xrdb:color2}
+unfocus-mid = ${xrdb:color10}
+unfocus-bright = ${xrdb:color15}
+
+; focused
+focus-dark = ${xrdb:color5}
+focus-mid = ${xrdb:color13}
+focus-bright = ${xrdb:color15}
+
+; urgent
+urgent-dark = ${xrdb:color1}
+urgent-mid = ${xrdb:color9}
+urgent-bright = ${xrdb:color15}
+
+; defaults
+background = ${xrdb:color0}
+foreground = ${xrdb:color15}
+text = ${xrdb:color15}

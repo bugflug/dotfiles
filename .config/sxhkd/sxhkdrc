@@ -19,7 +19,7 @@ super + p
 
 # quit/restart bspwm
 super + alt + r
-	$HOME/.config/init/xinitrc
+	$HOME/.glue/.xinitrc
 
 # close and kill
 super + {_,shift + }w

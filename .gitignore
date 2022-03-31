@@ -6,6 +6,7 @@
 
 .config/*
 !.config/bin
+.config/bin/fosnet
 !.config/bspwm
 !.config/neofetch
 !.config/polybar
