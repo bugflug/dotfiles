@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-sudo ip neigh replace 192.168.1.1 dev wlp2s0 lladdr 58:ef:68:a6:54:e4

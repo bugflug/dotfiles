@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-check () {
-	ps cax | grep $1
-}
-
-if check "sxhkd" ; then pkill -USR1 -x sxhkd ; else sxhkd & fi
-if check "polybar"; then pkill -x polybar ; fi ; $HOME/.config/polybar/launch &
-if check "bspwm"; then bspc wm -r ; else exec bspwm ; fi

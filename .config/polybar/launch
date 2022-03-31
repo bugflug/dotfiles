@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-echo "-" | tee -a /tmp/poly1.log
-polybar main 2>&1 | tee -a /tmp/poly1.log & disown 
