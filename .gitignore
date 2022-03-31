@@ -1,5 +1,6 @@
 .gitconfig
 .git/
+*.swp
 
 # selectively include .config files
 
