@@ -1,5 +1,5 @@
 ! load our generated theme colors
-#include ".config/gen/.Xresources"
+#include ".glue/gen/.Xresources"
 
 !! Colors
 
@@ -63,4 +63,5 @@ URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
 URxvt.depth: 24
 URxvt.iso14755: false
+!URxvt.termName: rxvt
 !URxvt.perl-xt: focus-background

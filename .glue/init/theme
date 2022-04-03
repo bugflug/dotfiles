@@ -24,6 +24,10 @@ declare -a keys=(
 	"C_BG_DIM"
 	"C_FG"
 	"C_FG_DIM"
+	"C_UNAV"
+	"C_UNAV_DIM"
+	"C_URG"
+	"C_URG_DIM"
 )
 for k in ${keys[@]} ; do
 	# k ey

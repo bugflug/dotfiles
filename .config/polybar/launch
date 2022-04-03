@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-echo "-" | tee -a /tmp/poly1.log
-polybar main 2>&1 | tee -a /tmp/poly1.log & disown 
+. $GLUE/gen/envars
+echo "-" | tee -a /tmp/poly1.log #/tmp/poly2.log
+polybar main 2>&1 | tee -a /tmp/poly1.log & disown
+#polybar right 2>&1 | tee -a /tmp/poly2.log & disown
